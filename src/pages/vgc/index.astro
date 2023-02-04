@@ -1,0 +1,9 @@
+---
+import Layout from '@layouts/Layout.astro';
+const posts = await Astro.glob('./*.md');
+---
+
+<Layout title="vgc posts">
+  <h1 class="mb-8 text-6xl">VGC Posts</h1>
+  {posts.map((post) => <p>{post.frontmatter.title}</p>)}
+</Layout>
