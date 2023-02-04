@@ -1,0 +1,13 @@
+---
+import Layout from './Layout.astro';
+
+const { title, date } = Astro.props.frontmatter;
+---
+
+<Layout title="blog post">
+  <h1 class="text-3xl">{title}</h1>
+  <p>{date}</p>
+  <div class="prose">
+    <slot />
+  </div>
+</Layout>

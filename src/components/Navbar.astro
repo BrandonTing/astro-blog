@@ -5,27 +5,30 @@ const navbarItems = [
     path: '/vgc',
   },
   {
-    title: 'Code',
+    title: '程式',
     path: '/code',
   },
   {
-    title: 'Common ACG',
+    title: 'ACG綜合',
     path: '/acg',
   },
   {
-    title: 'Other',
+    title: '其他',
     path: '/other',
   },
 ];
 ---
 
-<div>
-  <div>
-    <ul>
+<div class="flex bg-black text-white items-center">
+  <div class="font-bold text-lg ml-4">諸葛友亮</div>
+  <div class="ml-auto">
+    <ul class="flex">
       {
         navbarItems.map((item) => (
           <li>
-            <a href={item.path}>{item.title}</a>
+            <a href={item.path} class="p-4 block hover:bg-gray-700">
+              {item.title}
+            </a>
           </li>
         ))
       }
