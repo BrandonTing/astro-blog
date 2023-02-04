@@ -1,0 +1,34 @@
+---
+const navbarItems = [
+  {
+    title: 'VGC',
+    path: '/vgc',
+  },
+  {
+    title: 'Code',
+    path: '/code',
+  },
+  {
+    title: 'Common ACG',
+    path: '/acg',
+  },
+  {
+    title: 'Other',
+    path: '/other',
+  },
+];
+---
+
+<div>
+  <div>
+    <ul>
+      {
+        navbarItems.map((item) => (
+          <li>
+            <a href={item.path}>{item.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
